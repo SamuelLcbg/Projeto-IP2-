@@ -2,10 +2,15 @@ package projetoIp2;
 
 public class Gerente extends Pessoa {
 	private String idAdmin; 
-	public static int numAdm = 0; 
+	private static int numAdm = 0; 
 	
-	Gerente(){
-		
+	Gerente(String cpf, String nome, String idAdmin){
+		super(cpf,nome);
+		this.idAdmin = idAdmin; 
+	}
+	
+	public static int getQuantAdm() {
+		return numAdm; 
 	}
 	
 	public String getId() {
@@ -33,6 +38,10 @@ public class Gerente extends Pessoa {
 		
 		return testeNome && testeCpf && testeIdAdm; 
 		
+	}
+	
+	public String toString() {
+		return getCpf() + "   " + getNome() + "   " + getId();  
 	}
 	
 	

@@ -5,6 +5,10 @@ public abstract class  Pessoa {
 	private String cpf; 
 	private String nome; 
 	
+	Pessoa(String cpf, String nome){
+		this.cpf = cpf; 
+		this.nome = nome; 
+	}
 	
 	
 	public String getCpf() {

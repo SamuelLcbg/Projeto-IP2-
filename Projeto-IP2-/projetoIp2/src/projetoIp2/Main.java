@@ -66,15 +66,16 @@ public class Main {
 		LocalDate lt2 = LocalDate.of(2025, 2, 10);
 		
 		
-		Reserva r1 = new Reserva(o1,li1,lo1);
-		Reserva r2 = new Reserva(o2,li2,lo2);
-		Reserva r3 = new Reserva(o3,li3,lo3);
+		Reserva r1 = new Reserva(o1,li1,lo1,"001");
+		Reserva r2 = new Reserva(o2,li2,lo2,"002");
+		Reserva r3 = new Reserva(o3,li3,lo3,"003");
 		
 		System.out.println(r1); 
 		r1.setDataInicio(lt1);
 		r1.setDataFim(lt2);
+		r1.setIdReserva(null);
 		System.out.println("----Novas datas r1----");
-		System.out.println(r1.getDataInicio() + "   " +  r1.getDataFim());
+		System.out.println(r1.getDataInicio() + "   " +  r1.getDataFim() + "   " + r1.getIdReserva());
 		
 		r1.setOwner(o3);
 		System.out.println(r1);

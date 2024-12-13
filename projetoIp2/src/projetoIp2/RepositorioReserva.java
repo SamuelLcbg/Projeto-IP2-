@@ -9,20 +9,26 @@ public class RepositorioReserva {
         this.numero = 10;
         reservas = new Reserva[numero];
         }
+    
     RepositorioReserva(int numero){
         this.numero = numero;
         reservas = new Reserva[numero];
     }
+    
     public void adicionar(Reserva reserva){
         reservas[espacoLivre] = reserva;
         espacoLivre++;
     }
+    
+    
     public void listar(){
         for(int i = 0; i < espacoLivre; i++){
             System.out.println(reservas[i]);
         }
 
     }
+    
+    
     public void retirar(Reserva reserva){
         if(reserva != null){
             for(int i = 0; i < espacoLivre;i++){
@@ -36,6 +42,8 @@ public class RepositorioReserva {
             }
         }
     }
+    
+    
     public void atualizar(Reserva reserva){
         if(reserva != null){
             for(int i = 0; i < espacoLivre; i++){

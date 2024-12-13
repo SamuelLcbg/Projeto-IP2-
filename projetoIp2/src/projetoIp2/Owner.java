@@ -7,6 +7,7 @@ public class Owner extends Pessoa{
 	Owner(String cpf, String nome, String id){
 		super(cpf,nome); 
 		this.idProp = id; 
+		numDono++; 
 	}
 	
 	

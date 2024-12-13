@@ -3,22 +3,22 @@ package projetoIp2;
 import java.time.LocalDate;
 
 public class Reserva {
-    private projetoIp2.Owner propietario;
+    private Owner proprietario;
     private LocalDate dataInicio;
     private LocalDate dataFim;
 
-    Reserva() {
-        this.propietario = propietario;
-        this.dataInicio = dataInicio;
-        this.dataFim = dataFim;
+    Reserva(Owner owner, LocalDate dataIn, LocalDate dataOut) {
+        this.proprietario = owner;
+        this.dataInicio = dataIn;
+        this.dataFim = dataOut;
     }
 
-    public Owner getPropietario() {
-        return propietario;
+    public Owner getOwner() {
+        return proprietario;
     }
 
-    public void setPropietario(Owner propietario) {
-        this.propietario = propietario;
+    public void setOwner(Owner propietario) {
+        this.proprietario = propietario;
     }
 
     public LocalDate getDataInicio() {
@@ -50,7 +50,7 @@ public class Reserva {
 
         Reserva reservaTeste = (Reserva) obj;
 
-        boolean propietarioTeste = this.getPropietario().equals(reservaTeste.getPropietario());
+        boolean propietarioTeste = this.getOwner().equals(reservaTeste.getOwner());
         boolean dataInicioTeste = this.getDataInicio().equals(reservaTeste.getDataInicio());
         boolean dataFimTeste = this.getDataFim().equals(reservaTeste.getDataFim());
         return propietarioTeste && dataInicioTeste && dataFimTeste;
@@ -58,7 +58,7 @@ public class Reserva {
     }
 
     public String toString() {
-        return this.getPropietario() + "   " + this.getDataInicio() + "   " + this.getDataFim();
+        return this.getOwner() + "   " + this.getDataInicio() + "   " + this.getDataFim();
     }
 }
 

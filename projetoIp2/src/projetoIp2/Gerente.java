@@ -7,6 +7,7 @@ public class Gerente extends Pessoa {
 	Gerente(String cpf, String nome, String idAdmin){
 		super(cpf,nome);
 		this.idAdmin = idAdmin; 
+		numAdm++; 
 	}
 	
 	public static int getQuantAdm() {

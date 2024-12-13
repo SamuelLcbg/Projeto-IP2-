@@ -4,7 +4,7 @@ public class RepositorioOwner {
 
 	private int freeSpace = 0; 
 	private Owner[] dono; 
-	int number; 
+	private int number; 
 	
 	RepositorioOwner(){
 		this.number = 10; 

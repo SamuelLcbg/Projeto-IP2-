@@ -63,7 +63,7 @@ public class RepositorioGerente {
 	public void atualizar(Gerente gerente) {
 		if(gerente != null) {
 			for(int i = 0; i < freeSpace; i++) {
-				if(gerente.equals(manager[i])) {
+				if(gerente.getCpf().equals(manager[i].getCpf())) {
 					manager[i] = gerente; 
 					break; 
 				}

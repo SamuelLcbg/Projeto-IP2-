@@ -1,6 +1,6 @@
 package projetoIp2;
 
-public class RepositorioOwner {
+public class RepositorioOwner  {
 
 	private int freeSpace = 0; 
 	private Owner[] dono; 
@@ -16,7 +16,7 @@ public class RepositorioOwner {
 		this.dono = new Owner[number]; 
 	}
 	
-	public void adicionar(Owner owner) {
+	public void adicionar(Owner owner) throws ONEEx {
 		
 		boolean teste = true; 
 		
@@ -28,7 +28,8 @@ public class RepositorioOwner {
 				}
 			}
 		}else {
-			System.out.println("Não é possível adicionar donos null."); 
+			ONEEx one = new ONEEx(); 
+			throw one;
 		}
 		
 		if(teste != false) {
@@ -39,7 +40,7 @@ public class RepositorioOwner {
 		}
 	}
 	
-	public void retirar(Owner owner) {
+	public void retirar(Owner owner) throws ONEEx  {
 		if(owner != null) {
 			for(int i = 0; i < number; i++) {
 				
@@ -54,6 +55,9 @@ public class RepositorioOwner {
 				}
 			}
 			
+		}else {
+			ONEEx one = new ONEEx(); 
+			throw one; 
 		}
 		
 	}

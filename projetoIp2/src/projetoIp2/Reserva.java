@@ -6,15 +6,25 @@ public class Reserva {
     private Owner proprietario;
     private LocalDate dataInicio;
     private LocalDate dataFim;
+    private String idReserva; 
 
-    Reserva(Owner owner, LocalDate dataIn, LocalDate dataOut) {
+    Reserva(Owner owner, LocalDate dataIn, LocalDate dataOut, String id) {
         this.proprietario = owner;
         this.dataInicio = dataIn;
         this.dataFim = dataOut;
+        this.idReserva = id; 
     }
 
     public Owner getOwner() {
         return proprietario;
+    }
+    
+    public String getIdReserva() {
+    	return idReserva; 
+    }
+    
+    public void setIdReserva(String id) {
+    	this.idReserva = id; 
     }
 
     public void setOwner(Owner propietario) {

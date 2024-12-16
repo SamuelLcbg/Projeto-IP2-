@@ -16,8 +16,27 @@ public class RepositorioReserva {
     }
     
     public void adicionar(Reserva reserva){
-        reservas[espacoLivre] = reserva;
-        espacoLivre++;
+       boolean teste = true; 
+       
+       if(reserva != null) {
+    	   for(int i= 0 ; i <espacoLivre;i++) {
+    		   if(reserva.equals(reservas[i])) {
+    			   teste = false; 
+    			   break; 
+    		   }
+    	   }
+       }else {
+    	   System.out.println("não pode ser adicionado uma reserva null."); 
+       }
+       
+       if(teste != false) {
+    	   reservas[espacoLivre] = reserva; 
+    	   espacoLivre++; 
+       }else {
+    	   System.out.println("essa reserva já está presente no array"); 
+       }
+       
+       
     }
     
     
